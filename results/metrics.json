@@ -1,0 +1,29 @@
+{
+  "test_episode_seeds": "10000-10099",
+  "per_seed": {
+    "1": {
+      "greedy_mean": 280.5527851520806,
+      "greedy_std": 23.365165873457208,
+      "greedy_solved_share": 0.98,
+      "sampled_mean": 265.00711129015565,
+      "sampled_std": 61.503075032634534
+    },
+    "2": {
+      "greedy_mean": 274.99637800306107,
+      "greedy_std": 45.908603266344876,
+      "greedy_solved_share": 0.97,
+      "sampled_mean": 267.19883853267214,
+      "sampled_std": 60.156023476699694
+    },
+    "3": {
+      "greedy_mean": 271.919319061145,
+      "greedy_std": 46.356963998882605,
+      "greedy_solved_share": 0.96,
+      "sampled_mean": 256.98780778840285,
+      "sampled_std": 72.75040187220185
+    }
+  },
+  "untrained_sampled_mean": -182.71370054140706,
+  "greedy_mean_over_seeds": 275.8228274054289,
+  "greedy_mean_seed_std": 3.5727158807494814
+}

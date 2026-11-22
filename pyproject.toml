@@ -1,0 +1,25 @@
+[project]
+name = "ppo-from-scratch"
+version = "0.1.0"
+description = "Proximal Policy Optimization written from scratch in PyTorch, solving LunarLander on a laptop CPU"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.5",
+    "numpy>=2.0",
+    "gymnasium[box2d]>=1.0",
+    "matplotlib>=3.9",
+    "imageio>=2.34",
+    "pillow>=10",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
