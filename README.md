@@ -102,10 +102,6 @@ uv run pytest                                                                  #
 | entropy / value coefficients | 0.01 / 0.5 |
 | network | actor and critic: 2 × 64 tanh MLPs, orthogonal init |
 
-## Resume line
-
-> Implemented Proximal Policy Optimization from scratch in PyTorch (actor-critic, GAE, clipped surrogate objective); it solves LunarLander-v3 with a mean return of 276 over 100 unseen episodes across 3 seeds, trained on a laptop CPU in 6 minutes per seed.
-
 ## References
 
 - Schulman et al., *Proximal Policy Optimization Algorithms*, 2017.
