@@ -51,17 +51,23 @@ Two small networks share the work:
 
 Probability ratio between the new and the old policy:
 
-$$r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_\text{old}}(a_t \mid s_t)}$$
+```math
+r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_\text{old}}(a_t \mid s_t)}
+```
 
 Clipped surrogate objective (maximised):
 
-$$L^{\text{CLIP}}(\theta) = \mathbb{E}_t\left[\min\big(r_t(\theta)\,\hat A_t,\ \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\,\hat A_t\big)\right], \quad \epsilon = 0.2$$
+```math
+L^{\text{CLIP}}(\theta) = \mathbb{E}_t\left[\min\big(r_t(\theta)\,\hat A_t,\ \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\,\hat A_t\big)\right], \quad \epsilon = 0.2
+```
 
 Generalized Advantage Estimation (GAE):
 
-$$\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t), \qquad \hat A_t = \sum_{l \ge 0} (\gamma\lambda)^l\, \delta_{t+l}$$
+```math
+\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t), \qquad \hat A_t = \sum_{l \ge 0} (\gamma\lambda)^l\, \delta_{t+l}
+```
 
-Full loss per minibatch: $-L^{\text{CLIP}} + 0.5\,(V_\theta(s_t) - \hat R_t)^2 - 0.01\,\mathcal{H}[\pi_\theta(\cdot \mid s_t)]$,
+Full loss per minibatch: $-L^{\text{CLIP}} + 0.5\ (V_\theta(s_t) - \hat R_t)^2 - 0.01\ \mathcal{H}[\pi_\theta(\cdot \mid s_t)]$,
 where the entropy bonus $\mathcal{H}$ keeps the agent exploring.
 
 ## What I learned along the way
